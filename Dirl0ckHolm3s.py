@@ -16,7 +16,6 @@ print(logo)
 class cl:
     ENDC = '\033[0m'
     CODE_200 = '\033[93m'
-	
     # ADD more colors for different response codes
 
 
