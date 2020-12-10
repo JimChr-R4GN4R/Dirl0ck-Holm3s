@@ -1,5 +1,5 @@
 # Dirl0ck-Holm3s
-This is a dir bruteforce for websites!
+This is a dir bruteforce script for websites!
 
 
 
