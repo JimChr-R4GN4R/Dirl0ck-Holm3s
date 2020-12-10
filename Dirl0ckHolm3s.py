@@ -15,7 +15,7 @@ print(logo)
 
 class cl:
     ENDC = '\033[0m'
-    # ADD more colors for different responses
+    # ADD more colors for different response codes
 
 
 parser = argparse.ArgumentParser()
