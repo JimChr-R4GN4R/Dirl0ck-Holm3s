@@ -13,15 +13,9 @@ logo = r'''
  '''
 print(logo)
 
-
 class cl:
     ENDC = '\033[0m'
     # ADD more colors for different responses
-
-
-
-
-
 
 
 parser = argparse.ArgumentParser()
@@ -31,14 +25,12 @@ parser.add_argument( "-t", '--threads', help="Number of threads (default=1)", ch
 args = parser.parse_args()
 
 
-
 url = args.url
 if url[-1] == '/': url = url[:-1] # fix url format
 if url[0:4] != 'http': url = 'https://' + url # fix url format
 
 paths_list = args.list.read().split('\n')
 threads = args.threads
-
 
 def brute_dir():
 
@@ -53,6 +45,5 @@ def brute_dir():
 			else: BEGC = '\033[31m'
 
 			print( 'Response: [ {}{}{} ] |'.format(BEGC, response_code, cl.ENDC) , url + cur_path )
-
 
 brute_dir()
