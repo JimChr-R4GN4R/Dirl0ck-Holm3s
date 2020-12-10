@@ -15,6 +15,8 @@ print(logo)
 
 class cl:
     ENDC = '\033[0m'
+    CODE_200 = '\033[93m'
+	
     # ADD more colors for different response codes
 
 
@@ -41,7 +43,7 @@ def brute_dir():
 			cur_path = paths_list[i]
 			response_code = requests.get( url + cur_path ).status_code
 			
-			if response_code == 200: BEGC = '\033[93m'
+			if response_code == 200: BEGC = cl.CODE_200
 			else: BEGC = '\033[31m'
 
 			print( 'Response: [ {}{}{} ] |'.format(BEGC, response_code, cl.ENDC) , url + cur_path )
