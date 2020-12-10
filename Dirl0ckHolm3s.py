@@ -48,10 +48,10 @@ def brute_dir():
 
 			cur_path = paths_list[i]
 			response_code = requests.get( url + cur_path ).status_code
-			if response_code == 200: 
-				BEGC = '\033[93m' 
-			else: 
-				BEGC = '\033[31m'
+			
+			if response_code == 200: BEGC = '\033[93m'
+			else: BEGC = '\033[31m'
+
 			print( 'Response: [ {}{}{} ] |'.format(BEGC, response_code, cl.ENDC) , url + cur_path )
 
 
